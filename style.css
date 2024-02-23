@@ -1,0 +1,41 @@
+body{
+    background-image: url('./images/wallpaper.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container{
+    padding: 3%;
+    align-items: center;
+    text-align: center;
+}
+
+#page-title{
+    border-style: dotted;
+    border-radius: 2%;
+    max-width: 100%;
+}
+
+.profile-card{
+    margin: 6% 6%;
+    padding: 4%;
+    background-color: rgb(238, 238, 238);
+    border-radius: 4%;
+}
+
+.right-of-card{
+    margin-left: 3%;
+    padding: 5% 0%;
+    text-align: left;
+    display: inline;
+}
+
+.contact-logo{
+    max-width: 8%;
+}
+
+.contact-link{
+    margin: 0% 4% 0% 1%;
+}
+
+

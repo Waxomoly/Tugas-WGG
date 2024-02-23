@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/logo.webp" type="img/login/x-icon">
+    <title>Bikini Bottom Job Portal</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="./images/logo.webp" width="30" height="30" alt="">
+      Bikini Bottom Job Portal
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link ml-3" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ml-3" href="#">Employment</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link ml-3" href="#">Top Workers</a>
+        </li>
+        <li class="nav-item active">
+          <button class="btn btn-success my-2 my-sm-0 ml-3 mr-1" type="submit">Login</button>
+        </li>
+      </ul>
+    </div>
+  </nav>  
+
+
+  <div class="container">
+    <img src="./images/employee_of_the_month.png" alt="" id="page-title">
+    <section id="profiles">
+      <!--profile cards will be added here via javascript-->
+    </section>
+  </div>
+
+
+  
+
+
+  <script>
+    var dataList = [
+      ['Spongebob Squarepants', './images/person1.png', 'linkedin.com', 'instagram.com', 'Seorang koki yang ceria. ashdhshs abhsbibdid aibdhiabsidia.'],
+      ['Squilliam Fancyson', './images/person2.png', 'linkedin.com', 'instagram.com', 'Musisi terkenal se-Bikini Bottom. ashdhshs abhsbibdid aibdhiabsidia.'],
+      ['Eugene Crabs', './images/person3.png', 'linkedin.com', 'instagram.com', 'Pemiliki tempat makan "Krusty Krab" ashdhshs abhsbibdid aibdhiabsidia.'],
+      ['Sandy Cheeks', './images/person4.png', 'linkedin.com', 'instagram.com', 'Ilmuwan cerdas dari darat. ashdhshs abhsbibdid aibdhiabsidia.'],
+      ['T. McTrout', './images/person5.png', 'linkedin.com', 'instagram.com', 'Announcer paling populer di Bikini Bottom. ashdhshs abhsbibdid aibdhiabsidia.']
+    ]
+
+    for(var i = 0; i < dataList.length; i++){
+      var card = document.createElement('div');
+      card.className = 'profile-card row';
+      var profilePicture = document.createElement('img');
+      profilePicture.src = dataList[i][1];
+      var leftOfCard = document.createElement('div');
+      leftOfCard.className = 'left-of-card col';
+      var rightOfCard = document.createElement('div');
+      rightOfCard.className = 'right-of-card col';
+      var profileName = document.createElement('h5');
+      profileName.className = 'profile-name';
+      profileName.innerHTML = dataList[i][0];
+      var linkedinLogo = document.createElement('img');
+      linkedinLogo.className = 'contact-logo';
+      linkedinLogo.src = './images/linkedin_logo.png';
+      var linkedinURL = document.createElement('a');
+      linkedinURL.innerHTML = 'linkedin';
+      linkedinURL.href = dataList[i][2];
+      linkedinURL.className = 'contact-link';
+      var instagramLogo = document.createElement('img');
+      instagramLogo.className = 'contact-logo';
+      instagramLogo.src = './images/instagram_logo.png';
+      var instagramURL = document.createElement('a');
+      instagramURL.innerHTML = 'instagram';
+      instagramURL.href = dataList[i][3];
+      instagramURL.className = 'contact-link';
+      var description = document.createElement('p');
+      description.innerHTML = dataList[i][4];
+      
+
+
+      leftOfCard.appendChild(profilePicture);
+      rightOfCard.appendChild(profileName);
+      rightOfCard.appendChild(linkedinLogo);
+      rightOfCard.appendChild(linkedinURL);
+      rightOfCard.appendChild(instagramLogo);
+      rightOfCard.appendChild(instagramURL);
+      rightOfCard.appendChild(description);
+      card.appendChild(leftOfCard);
+      card.appendChild(rightOfCard);
+      document.getElementById('profiles').appendChild(card);
+    }
+
+  </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
